@@ -45,7 +45,7 @@ public class FacebookInfo {
     	FacebookClient facebookClient = new DefaultFacebookClient(pageAccessToken);
     	Connection<User> myFriends = facebookClient.fetchConnection("me/friends", User.class);
 
-    	System.out.println("Count of my friends- " + myFriends.getData().size());
+    	System.out.println("Count of my friends- " + myFriends.getTotalCount()); 
     	
     	System.out.println(myFriends.toString());
     	
