@@ -12,7 +12,7 @@ import com.restfb.types.User;
 
 public class FacebookInfo {
 	 /* Variables */
-    private final String pageAccessToken = "EAAEDrRFWN5UBACsZAFmIkJBr9mqpzDA3zspbOPcR2HfyCt1WEZCaZBqpCZAIqSgP95yXGMOrNw2XEZC1RR0UN7z8Ex1gKuuM09lPJ01XNNaHbym0CXpYlGtRxyauRfVeZBdk3H2YndkeysZAg1tg9M7XGOtr9vXNdMZD";
+    private final String pageAccessToken = "EAACEdEose0cBAOVXirgYiHkz9Snf78CDf4e2W9DDrZA4iUqeNL5onV6csxRJcbcRV2kU99KMrXcrgVuGauoNZAKdCcFopUl1bWkdyFjBR92NmTP8wLtdvCF9VbutA6EB4xZA4Y1sNpzNy1RsHge66reV6dYBBsUDTZC7ZBUSEhQZDZD";
     private final String pageID = "10205237715641106";
     private FacebookClient fbClient;
     private User myuser = null;    //Store references to your user and page
@@ -47,6 +47,8 @@ public class FacebookInfo {
 
     	System.out.println("Count of my friends- " + myFriends.getData().size());
     	
+    	System.out.println(myFriends.toString());
+    	
     	JsonObject userData = facebookClient.fetchObject("me",
                 JsonObject.class, Parameter.with("fields", "name, first_name, hometown"));
     	
@@ -55,7 +57,7 @@ public class FacebookInfo {
     
     public static void main(String[] args)
     {
-    	PostOnFb p = new PostOnFb();
+    	FacebookInfo p = new FacebookInfo();
     	//p.makeTestPost();
 		FacebookClient facebookClient= new DefaultFacebookClient(p.getAccessToken());
         
@@ -74,6 +76,8 @@ public class FacebookInfo {
         System.out.println("FirstName=" + userData.getString("first_name"));
         System.out.println("Name= " + userData.getString("name"));
         System.out.println("hometown= " + userData.getString("hometown"));
+        
+        JsonObject friends = p.getFriend("");
     }
 
 }
