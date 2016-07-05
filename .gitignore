@@ -19,6 +19,8 @@ local.properties
 .settings/
 .loadpath
 my-app/target/
+target/
+my-app\target\
 
 # External tool builders
 .externalToolBuilders/
