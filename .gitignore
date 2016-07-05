@@ -2,6 +2,7 @@
 ## Eclipse
 #################
 
+*.tomcatplugin
 *.jar
 *.class
 *.pydevproject
