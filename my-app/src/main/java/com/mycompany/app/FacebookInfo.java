@@ -18,6 +18,7 @@ import com.restfb.types.FacebookType;
 import com.restfb.types.Page;
 import com.restfb.types.User;
 
+@WebServlet("/FacebookInfo")
 public class FacebookInfo extends HttpServlet{
 	
 	 /* Variables */
@@ -55,7 +56,7 @@ public class FacebookInfo extends HttpServlet{
     			+ "									 email, location, relationship_status, religion, political, work, gender"));
     	return info;
     }
-    
+
     public JsonObject getFriend(FacebookClient fbClient,String name){
     	Connection<User> myFriends = fbClient.fetchConnection("me/friends", User.class);
 
@@ -68,6 +69,7 @@ public class FacebookInfo extends HttpServlet{
     	
     	return userData;
     }
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	// TODO Auto-generated method stub
