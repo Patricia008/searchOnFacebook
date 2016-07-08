@@ -1,0 +1,25 @@
+{
+	"Friends": [
+		{
+			"FriendId" : "1",
+			"FriendName" : "Andrei",
+			"FriendAge" : "23",
+			"FriendAddress" : "Str. Victoriei",
+			"FriendWorkPlace" : "Unemployed" 		
+		},
+		{
+			"FriendId" : "2",
+			"FriendName" : "Maria",
+			"FriendAge" : "47",
+			"FriendAddress" : "Str. Brediceanu",
+			"FriendWorkPlace" : "SAP"
+		},
+		{
+			"FriendId" : "3",
+			"FriendName" : "Ionut",
+			"FriendAge" : "32",
+			"FriendAddress" : "Str. Amaradiei",
+			"FriendWorkPlace" : "Hella"
+		}
+	]
+}
