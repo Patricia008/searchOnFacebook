@@ -20,6 +20,13 @@
 			"FriendAge" : "32",
 			"FriendAddress" : "Str. Amaradiei",
 			"FriendWorkPlace" : "Hella"
+		},
+		{
+			"FriendId" : "14",
+			"FriendName" : "Unel",
+			"FriendAge" : "20",
+			"FriendAddress" : "Str. Victoriei",
+			"FriendWorkPlace" : "Sap" 		
 		}
 	]
 }

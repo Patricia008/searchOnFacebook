@@ -4,7 +4,7 @@
 	xmlns:core="sap.ui.core" >
 	<Page
 		title="{i18n>MasterTitle}" >
-		<!--subHeader>
+		<subHeader>
 			<Bar>
 				<contentLeft>
 					<SearchField
@@ -13,8 +13,17 @@
 					</SearchField>
 				</contentLeft>
 			</Bar>
-		</subHeader-->
+		</subHeader>
+		<VBox>
+			<Text text="Select the criteria for search"/>
+			<HBox>
+				<RadioButton id="name" groupName="criteria" text="Name"/>
+				<RadioButton id="homeTown" groupName="criteria" text="HomeTown"/> 
+				<RadioButton id="workPlace" groupName="criteria" text="WorkPlace"/>
+			</HBox>
+		</VBox>
 		<List
+			id="list"
 			items="{/Friends}" 
 			mode="{device>/listMode}"
 			select="handleListSelect">
